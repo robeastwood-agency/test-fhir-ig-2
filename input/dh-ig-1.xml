@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="au.digitalhealth.r4"/>
+    <url value="http://ns.electronichealth.net.au/fhir/ImplementationGuide/au.digitalhealth.r4"/>
+    <version value="1.2.0-ci-build"/>
+    <name value="ADHAFHIR"/>
+    <title value="Australian Digital Health Agency FHIR Implementation Guide"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Australian Digital Health Agency"/>
+    <contact>
+        <name value="Australian Digital Health Agency"/>
+        <telecom>
+            <system value="email"/>
+            <value value="mailto:help@digitalhealth.gov.au"/>
+        </telecom>
+    </contact>
+    <description
+        value="The Australian Digital Health Agency (ADHA) FHIR Implementation Guide contains HL7™ FHIR® Release 4 (R4) artefacts authored and maintained by the Agency to support the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards to provide for system interoperability and compatibility with other profiles."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="AU"/>
+        </coding>
+    </jurisdiction>
+    <copyright
+        value="Copyright © 2023 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)."/>
+    <packageId value="au.digitalhealth.r4"/>
+    <license value="Apache-2.0"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn id="aucore">
+        <uri value="http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core"/>
+        <packageId value="hl7.fhir.au.core"/>
+        <version value="current"/>
+    </dependsOn>
+    <definition>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-allergyintolerance-core-1"/>
+            </reference>
+            <name value="ADHA Core AllergyIntolerance"/>
+            <description
+                value="The purpose of this profile is to provide a core representation of an allergy or intolerance for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. This profile supports a summary statement relating to an allergy or intolerance including asserting negation for a specific allergy or intolerance, a category, or that a patient has no known allergies or intolerances."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <!-- <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-condition-core-1"/>
+            </reference>
+            <name value="ADHA Core Condition"/>
+            <description
+                value="The purpose of this profile is to provide a core representation of a condition for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. This profile supports a statement of a condition, problem, or diagnosis including asserting negation for specific conditions or problems."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-consent-aodr-1"/>
+            </reference>
+            <name value="ADHA Record of Australian Organ Donor Register Consent"/>
+            <description
+                value="The purpose of this profile is to define a representation of a record of organ and tissue donation decision held by the Australian Organ Donor Register for the electronic exchange of digital health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-composition-shs-1"/>
+            </reference>
+            <name value="ADHA Shared Health Summary Document Composition"/>
+            <description
+                value="The purpose of this profile is to define a representation of a Shared Health Summary document for a patient for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. A composition is a set of resources composed into a single coherent clinical statement that may have clinical attestation."/>
+            <exampleBoolean value="false"/>
+        </resource><resource>
+            <reference>
+                <reference value="StructureDefinition/dh-composition-document-1"/>
+            </reference>
+            <name value="ADHA Document Composition"/>
+            <description
+                value="The purpose of this profile is to provide a document composition for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. A composition is a set of resources composed into a single coherent clinical statement that may have clinical attestation."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-composition-cocs-1"/>
+            </reference>
+            <name value="ADHA Continuity of Care Summary Composition"/>
+            <description
+                value="The purpose of this profile is to define a representation of a Continuity of Care Summary Document for a patient for the electronic exchange of health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia. This profile standardises the core, common or critical information for exchange of information between healthcare providers, and individual, to support continuity of care across encounters and healthcare settings. Specific use cases are supported by defined profiles for those use cases such as Shared Health Summary, Event Summary, Discharge Summary, Transfer Summary, Referral; where available the most specific applicable profile should be used. A composition is a set of resources composed into a single coherent clinical statement that may have clinical attestation."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-explanationofbenefit-medicare-mbs-1"/>
+            </reference>
+            <name value="ADHA Medicare Overview Composition"/>
+            <description
+                value="The purpose of this profile is to define a representation of a record of a claim against the Medicare Benefits Schedule (MBS) or Department of Veterans' Affairs (DVA) for the electronic exchange of digital health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/dh-composition-mov-1"/>
+            </reference>
+            <name value="ADHA Explanation of Benefi MBS or DVA"/>
+            <description
+                value="The purpose of this profile is to define a representation of a record of a claim against the Medicare Benefits Schedule (MBS) or Department of Veterans' Affairs (DVA) for the electronic exchange of digital health information between individuals, healthcare providers, and the My Health Record system infrastructure in Australia."/>
+            <exampleBoolean value="false"/>
+        </resource> -->
+       
+
+        <!--ALLERGYINTEROLANCE EXAMPLES-->
+        <resource>
+            <reference>
+                <reference value="AllergyIntolerance/ibuprofen-psml-03"/>
+            </reference>
+            <name
+                value="Ibuprofen allergy entry for Mac PRIEST - Community pharmacy medicine review (2018)"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-allergyintolerance-core-1"
+            />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="AllergyIntolerance/noneknown-es-02"/>
+            </reference>
+            <name value="No known allergy for Mr Zhang Wei - follow up encounter (2020)"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-allergyintolerance-core-1"
+            />
+        </resource>
+        <!-- <resource>
+            <reference>
+                <reference value="AllergyIntolerance/nofood-01"/>
+            </reference>
+            <name value="Patient reports no food allergies for Mrs. Bonny Goodwin"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-allergyintolerance-core-1"
+            />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="AllergyIntolerance/sulfonamide-01"/>
+            </reference>
+            <name value="Patient reported sulfonamide antibacterial allergy for Mrs. Bonny Goodwin"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-allergyintolerance-core-1"
+            />
+        </resource> -->
+       
+        <!--CONDITION EXAMPLES-->
+        <!-- <resource>
+            <reference>
+                <reference value="Condition/wound-es-01"/>
+            </reference>
+            <name
+                value="Nail wound of sole of foot for Billy Tjakamarra - Nail wound of sole of foot encounter (2017)"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-condition-core-1"
+            />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/uti-es-02"/>
+            </reference>
+            <name value="Urinary tract infection for Mr Zhang Wei - follow up encounter (2020)"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-condition-core-1"
+            />
+        </resource> -->
+
+        
+        <!--CONSENT EXAMPLES-->
+        <!-- <resource>
+            <reference>
+                <reference value="Consent/aodr-01"/>
+            </reference>
+            <name value="Australian Organ Donor Register Consent - Not willing to be a donor"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-consent-aodr-1"
+            />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/aodr-02"/>
+            </reference>
+            <name
+                value="Australian Organ Donor Register Consent - Willing to be a donor, donate all"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-consent-aodr-1"
+            />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/aodr-03"/>
+            </reference>
+            <name
+                value="Australian Organ Donor Register Consent - Willing to be a donor, donate specific tissue / organ"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-consent-aodr-1"
+            />
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/mds"/>
+            </reference>
+            <name
+                value="R4 transform of the MDS test data Consent.id a008d446-ba17-11ec-833a-b1763b0a7715"/>
+            <description value="TBD"/>
+            <exampleCanonical
+                value="http://ns.electronichealth.net.au/fhir/StructureDefinition/dh-consent-aodr-1"
+            />
+        </resource> -->
+        
+        <page>
+            <nameUrl value="toc.html"/>
+            <title value="Table of Contents"/>
+            <generation value="html"/>
+            <page>
+                <nameUrl value="index.html"/>
+                <title value="Home"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="policy.html"/>
+                <title value="Policy"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="conformance.html"/>
+                <title value="Conformance"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="guidance.html"/>
+                <title value="Guidance"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="profiles.html"/>
+                <title value="Artefacts"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="searchparams.html"/>
+                <title value="Search Parameters and Operations"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="capstatements.html"/>
+                <title value="Capability Statements"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="namingsys.html"/>
+                <title value="NamingSystems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="terminology.html"/>
+                <title value="Terminology"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="structuremaps.html"/>
+                <title value="Maps"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="examples.html"/>
+                <title value="Examples"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="downloads.html"/>
+                <title value="Downloads"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="disclaimers.html"/>
+                <title value="Disclaimers"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="disclaimers-ihtsdo.html"/>
+                <title value="IHTSDO (SNOMED CT) disclaimer"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="disclaimers-loinc.html"/>
+                <title value="Regenstrief Institute (LOINC) disclaimer"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="profiles-generated.html"/>
+                <title value="Autogenerated list of profiles"/>
+                <generation value="markdown"/>
+            </page>
+        </page>
+
+         <!-- PARAMETER VALUES -->
+        <!-- refer to master list http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html -->
+
+        <!-- The copyright year text to include in the IG footer -->
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2023+"/>
+        </parameter>
+
+        <!-- Relative path to a location in the IG repository from which to load resources -->
+        <!-- As the path ends in /*, then include all resource sub-folders -->
+        <parameter>
+            <code value="path-resource"/>
+            <value value="input/resources/*"/>
+        </parameter>
+
+        <!-- Relative path to a location in the IG repository from which to load example resources -->
+        <parameter>
+            <code value="path-resource"/>
+            <value value="input/examples"/>
+        </parameter>
+
+        <!-- Relative path in which profile markdown pages (intro and notes) are found -->
+        <parameter>
+            <code value="path-pages"/>
+            <value value="input/intro-notes"/>
+        </parameter>
+
+        <!-- Relative path in which main menu pages are found -->
+        <parameter>
+            <code value="path-pages"/>
+            <value value="input/pagecontent"/>
+        </parameter>
+
+        <!-- Relative path in which various pages that are shared across the IG are found -->
+        <parameter>
+            <code value="path-pages"/>
+            <value value="input/includes"/>
+        </parameter>
+
+        <!-- Determines whether the next/previous navigation tabs are shown in the header and footer -->
+        <parameter>
+            <code value="shownav"/>
+            <value value="false"/>
+        </parameter>
+
+        <!-- If true, render inherited constraints in the full details and invariants view -->
+        <parameter>
+            <code value="show-inherited-invariants"/>
+            <value value="false"/>
+        </parameter>
+
+        <!-- default value is true -->
+        <!-- ImplementationGuide.contact value is propagated to generated artefacts eg StructureDefinition.contact -->
+        <parameter>
+            <code value="apply-contact"/>
+            <value value="true"/>
+        </parameter>
+
+        <!-- default value is true -->
+        <!-- ImplementationGuide.version value is NOT globally propagated to generated artefacts eg StructureDefinition.version -->
+        <parameter>
+            <code value="apply-version"/>
+            <value value="false"/>
+        </parameter>
+
+        <!-- default value is true -->
+        <!-- ImplementationGuide.copyright value is NOT globally propagated to generated StructureDefinition.copyright -->
+        <parameter>
+            <code value="apply-copyright"/>
+            <value value="false"/>
+        </parameter>
+        
+        <!-- ImplementationGuide.copyright value is propagated to generated StructureDefinition.copyright only when one is empty -->
+        <parameter>
+            <code value="default-copyright"/>
+            <value value="true"/>
+        </parameter>
+
+        <!-- If true, causes the mapping tab to be excluded from all StructureDefinition artifact pages -->
+        <parameter>
+            <code value="excludemap"/>
+            <value value="true"/>
+        </parameter>
+
+        <!-- The relative path to a parameters resource that contains expansion parameters used when the IG publisher expands a value set -->
+        <!-- Specifically, this parameter resource configures the edition of SNOMED to be Australian -->
+        <parameter>
+            <code value="path-expansion-params"/>
+            <value value="../input/_resources/terminology-settings.json"/>
+        </parameter>
+
+        <!-- IG publisher logging output -->
+        <!-- init: Messages describing the start up process -->
+        <parameter>
+            <code value="logging"/>
+            <value value="init"/>
+        </parameter>
+
+        <!-- IG publisher output logging -->
+        <!-- progress: Overall progress messages -->
+        <parameter>
+            <code value="logging"/>
+            <value value="progress"/>
+        </parameter>
+
+        <!-- IG publisher output logging -->
+        <!-- tx:  Messages describing the use of the terminology server -->
+        <parameter>
+            <code value="logging"/>
+            <value value="tx"/>
+        </parameter>
+
+        <!-- IG publisher output logging -->
+        <!-- generate: Log when producing an individual resource -->
+        <parameter>
+            <code value="logging"/>
+            <value value="generate"/>
+        </parameter>
+
+        <!-- IG publisher output logging -->
+        <!-- html: Log when validating an html page -->
+        <parameter>
+            <code value="logging"/>
+            <value value="html"/>
+        </parameter>      
+
+    </definition>
+</ImplementationGuide>
