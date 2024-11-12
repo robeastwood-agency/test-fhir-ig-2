@@ -6,8 +6,8 @@ output
 qa
 txCache/
 input-cache
-local-template
 .index.json
+.index.db
 
 # Don't commit this because it's so large #
 ###########################################

@@ -1,0 +1,14 @@
+﻿{
+  "name" : "adha.template.local",
+  "type" : "fhir.template",
+  "license" : "Apache-2.0",
+  "description" : "Local FHIR implementation guide template that adds a javascript file for the Australian Digital Health Agency developer portal.",
+  "author" : "https://www.digitalhealth.gov.au/",
+  "canonical" : "http://ns.electronichealth.net.au/fhir/Template/adha.template.local",  
+  "base" : "adha.template.base",
+  "dependencies" : {
+    "adha.template.base" : "current"
+  },
+  "version" : "0.0.1"
+}
+ 
